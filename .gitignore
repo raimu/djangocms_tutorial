@@ -4,3 +4,4 @@
 *.sqlite3
 local_settings.py
 env
+myproject/media/*
