@@ -5,12 +5,12 @@ from django.utils.translation import ugettext as _
 
 
 class PollPlugin(CMSPluginBase):
-    model = PollPluginModel  # Model where data about this plugin is saved
-    name = _("Poll Plugin")  # Name of the plugin
-    render_template = "polls/plugin.html"  # template to render the plugin with
+    model = PollPluginModel
+    name = _("Poll Plugin")
+    render_template = "polls/plugin.html"
 
     def render(self, context, instance, placeholder):
         context.update({'instance': instance})
         return context
 
-plugin_pool.register_plugin(PollPlugin)  # register the plugin
+plugin_pool.register_plugin(PollPlugin)
